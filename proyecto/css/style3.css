@@ -1,0 +1,200 @@
+:root {
+    --black: #131416;
+    --gray: #333642;
+  }
+  
+  body{
+    background: #25A9FC;
+  }
+  /*para unir tadas las partes*/
+  .unir-partes{
+    position: relative;
+    margin: auto;
+    display: block;
+    margin-top: 20vmin;
+    margin-bottom: 20vmin;
+    width: 60vmin;
+    height:60vmin;
+  }
+  /*las orejas*/
+  .ear {
+    position: absolute;
+    width: 8vmin;
+    height: 8vmin;
+    background: var(--gray);
+    border-radius: 50%;
+    border: 3vmin solid var(--black);
+    top: 2vmin;
+  }
+  /*oreja derecha*/
+  .ear.left {
+    left: 12vmin;
+  }
+  /*oreja izquierda*/
+  .ear.right {
+    right: 12vmin;
+  }
+  /*parte superior*/
+  .parte-superior {
+    position: absolute;
+    top: 5vmin;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30vmin;
+    height: 25vmin;
+    background: white;
+    border-radius: 50% 50% 40% 40%;
+  }
+  /*la naris*/
+  .nariz {
+    position: absolute;
+    height: 3vmin;
+    width: 5vmin;
+    border-radius: 50%;
+    background: var(--black);
+    left: 50%;
+    transform: translateX(-50%);
+    top: 15vmin;
+  }
+  
+  .nariz::before {
+    content: '';
+    position: absolute;
+    width: 1.5vmin;
+    height: 0.75vmin;
+    border-radius: 50%;
+    background: white;
+    top: 0.5vmin;
+    right: 1vmin;
+    transform: rotate(10deg);
+  }
+  /*La boca*/
+  .boca {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--black);
+    width: 13vmin;
+    height: 5vmin;
+    bottom: 0.5vmin;
+    clip-path: circle(50% at 50% 0);
+  }
+  /*La lengua*/
+  .boca::before {
+    content: '';
+    position: absolute;
+    width: 7vmin;
+    height: 5vmin;
+    border-radius: 50%;
+    background: red;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -3vmin;
+  }
+  /*los brazos*/
+  .arm {
+    position: absolute;
+    width: 20vmin;
+    height: 10vmin;
+    background: var(--black);
+    border-radius: 20% / 50%;
+    top: 27vmin;
+  }
+  
+  .arm.left {
+    left: 2vmin;
+    transform: rotate(-25deg);
+  }
+  
+  .arm.right {
+    right: 2vmin;
+    transform: rotate(25deg);
+  }
+  /*parches de los ojos*/
+  .patch {
+    position: absolute;
+    top: 5vmin;
+    width: 11vmin;
+    height: 13vmin;
+    background: black;
+    border-radius: 50% 50% 70% 30% / 29% 27% 73% 71%;
+  }
+  
+  .patch.left {
+    left: 3vmin;
+    transform: rotate(10deg);
+  }
+  
+  .patch.right {
+    right: 3vmin;
+    transform: rotateY(180deg) rotate(10deg);
+  }
+  /*los ojos*/
+  .eye {
+    position: absolute;
+    top: 8vmin;
+    width: 4vmin;
+    height: 4vmin;
+    background: black;
+    border: 1vmin solid white;
+    border-radius: 50%;
+  }
+  /*iluminacion de los ojos*/ 
+  .eye::after {
+    content: '';
+    position: absolute;
+    width: 1vmin;
+    height: 1vmin;
+    background: white;
+    border-radius: 50%;
+    bottom: 0.5vmin;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .eye.left {
+    left: 6vmin;
+  }
+  
+  .eye.right {
+    right: 6vmin;
+  }
+  /*parte inferior*/
+  .body {
+    position: absolute;
+    bottom: 2vmin;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35vmin;
+    height: 35vmin;
+    background: var(--black);
+    border-radius: 40%;
+    overflow: hidden;
+  }
+  /*barriga*/
+ .body::before {
+    content: '';
+    position: absolute;
+    height: 35vmin;
+    width: 35vmin;
+    background: white;
+    border-radius: 50%;
+    bottom: -10vmin;
+  }
+  /*las patas*/
+  .leg {
+    position: absolute;
+    width: 18vmin;
+    height: 18vmin;
+    background: var(--black);
+    border-radius: 50%;
+    bottom: 0;
+  }
+  
+  .leg.left {
+    left: 8vmin;
+  }
+  .leg.right {
+    right: 8vmin;
+  }
+  
